@@ -1,0 +1,40 @@
+START
+  ↓
+Import Modules
+  ↓
+get_valid_word(words)
+  ↓
+Initialize:
+  word_letters ← unique letters in word
+  alphabet ← A-Z
+  used_letters ← {}
+  lives ← 7
+  ↓
+WHILE word_letters ≠ ∅ AND lives > 0:
+  ↓
+  Display Lives, Used Letters, Hangman Visual
+  Display Word Progress (with '-' for unguessed)
+  ↓
+  Input letter → user_letter
+  ↓
+  IF user_letter ∈ alphabet - used_letters:
+    Add to used_letters
+    IF user_letter ∈ word_letters:
+      Remove from word_letters
+    ELSE:
+      lives -= 1
+      Show "Incorrect"
+  ELSE IF user_letter ∈ used_letters:
+    Show "Already guessed"
+  ELSE:
+    Show "Invalid input"
+  ↓
+END WHILE
+  ↓
+IF lives == 0:
+  Show final hangman image
+  Display "You Lost", Show word
+ELSE:
+  Display "You Won", Show word
+  ↓
+END

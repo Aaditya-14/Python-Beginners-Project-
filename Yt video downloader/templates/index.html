@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Video Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select, button {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 90%;
+    }
+
+    input, select {
+      background: #2b2b2b;
+      color: #fff;
+    }
+
+    button {
+      background-color: #ff0000;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>YouTube Video Downloader</h1>
+    <form id="download-form">
+      <input type="url" id="video-url" placeholder="Enter YouTube video URL" required>
+      
+      <select id="resolution" required>
+        <option value="">Select resolution</option>
+        <option value="1080p">1080p</option>
+        <option value="720p">720p</option>
+        <option value="480p">480p</option>
+        <option value="360p">360p</option>
+      </select>
+
+      <a href="/static/Balencity.zip" >Download</a>
+    </form>
+  </div>
+</body>
+</html>
